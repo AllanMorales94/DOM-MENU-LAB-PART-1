@@ -1,4 +1,4 @@
-// Menu data structure
+// Task 3.0 Menu data structure
 const menuLinks = [
   {text: 'about', href: '/about'},
   {text: 'catalog', href: '/catalog'},
