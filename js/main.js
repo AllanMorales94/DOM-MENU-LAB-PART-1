@@ -18,3 +18,6 @@ topMenuEl.style.height = '100%'
 
 // Task 2.2 using var as asked to on Task 1.1
 topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
+
+// Task 2.3 using classList to assign a class 
+topMenuEl.classList = 'flex-around'
