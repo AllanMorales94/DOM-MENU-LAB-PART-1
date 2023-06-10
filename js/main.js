@@ -5,4 +5,7 @@ const mainEl = document.querySelector('main')
 mainEl.style.backgroundColor = 'var(--main-bg)'
 
 // Task 1.2 using innerHTML to update our html with a new element 
-mainEl.innerHTML = '<h1>Polish Your Mastering Skills</h1>'
+mainEl.innerHTML = '<h1>Polish Your Mastering Skills!</h1>'
+
+// Task 1.3 using classList to assign a class
+mainEl.classList = 'flex-ctr'
