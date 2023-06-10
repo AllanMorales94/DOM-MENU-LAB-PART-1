@@ -9,3 +9,6 @@ mainEl.innerHTML = '<h1>Polish Your Mastering Skills!</h1>'
 
 // Task 1.3 using classList to assign a class
 mainEl.classList = 'flex-ctr'
+
+// Task 2.0 selecting an id using #
+const topMenuEl = document.querySelector('#top-menu')
