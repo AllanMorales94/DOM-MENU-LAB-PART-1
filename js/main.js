@@ -15,3 +15,6 @@ const topMenuEl = document.querySelector('#top-menu')
 
 // Task 2.1 using style to add a height to our css file
 topMenuEl.style.height = '100%'
+
+// Task 2.2 using var as asked to on Task 1.1
+topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
