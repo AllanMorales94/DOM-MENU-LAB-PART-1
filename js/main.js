@@ -12,3 +12,6 @@ mainEl.classList = 'flex-ctr'
 
 // Task 2.0 selecting an id using #
 const topMenuEl = document.querySelector('#top-menu')
+
+// Task 2.1 using style to add a height to our css file
+topMenuEl.style.height = '100%'
