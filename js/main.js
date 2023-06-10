@@ -1,3 +1,12 @@
+// Menu data structure
+const menuLinks = [
+  {text: 'about', href: '/about'},
+  {text: 'catalog', href: '/catalog'},
+  {text: 'orders', href: '/orders'},
+  {text: 'account', href: '/account'},
+];
+
+
 // Task 1.0 selecting our main element from our document 
 const mainEl = document.querySelector('main')
 
