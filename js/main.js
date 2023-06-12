@@ -42,3 +42,6 @@ menuLinks.forEach(link => {
   // Append the new element to the topMenuEl element.
   topMenuEl.append(aEl)
 });
+
+// Task 4.0 selecting the id using #
+const subMenuEl = document.querySelector('#sub-menu')
