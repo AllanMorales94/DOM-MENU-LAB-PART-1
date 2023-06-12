@@ -45,3 +45,6 @@ menuLinks.forEach(link => {
 
 // Task 4.0 selecting the id using #
 const subMenuEl = document.querySelector('#sub-menu')
+
+// Task 4.1 using style to add a height to our css file
+subMenuEl.style.height = '100%'
