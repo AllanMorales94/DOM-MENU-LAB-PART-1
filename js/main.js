@@ -51,3 +51,10 @@ subMenuEl.style.height = '100%'
 
 // Task 4.2 using style to link our color from our css file
 subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)'
+
+// Task 4.3 using classList to assign a class
+subMenuEl.classList = 'flex-around'
+
+// Task 4.4 using CSS styling to position 
+subMenuEl.style.position = 'absolute'
+
