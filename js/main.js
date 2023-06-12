@@ -48,3 +48,6 @@ const subMenuEl = document.querySelector('#sub-menu')
 
 // Task 4.1 using style to add a height to our css file
 subMenuEl.style.height = '100%'
+
+// Task 4.2 using style to link our color from our css file
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)'
