@@ -58,3 +58,5 @@ subMenuEl.classList = 'flex-around'
 // Task 4.4 using CSS styling to position 
 subMenuEl.style.position = 'absolute'
 
+// Task 4.5 using CSS to adjust top property
+subMenuEl.style.top = '0'
