@@ -80,3 +80,8 @@ subMenuEl.style.position = 'absolute'
 
 // Task 4.5 using CSS to adjust top property
 subMenuEl.style.top = '0'
+
+// Task 5.1 cache all <a> elements inside a variable to a different element
+const topMenuLinks = document.querySelectorAll('#top-menu a')
+// Task 5.1 declare a showingSubMenu variable and initialize it to false
+let showingSubMenu = false
