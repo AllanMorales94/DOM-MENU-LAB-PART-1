@@ -85,3 +85,11 @@ subMenuEl.style.top = '0'
 const topMenuLinks = document.querySelectorAll('#top-menu a')
 // Task 5.1 declare a showingSubMenu variable and initialize it to false
 let showingSubMenu = false
+
+// Task 5.2
+topMenuEl.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  const link = evt.target;
+  if (link.tagName !== 'A') return;
+  console.log(link.textContent);
+});
