@@ -93,3 +93,11 @@ topMenuEl.addEventListener('click', function(evt) {
   if (link.tagName !== 'A') return;
   console.log(link.textContent);
 });
+
+// Task 5.3
+if(link.classList.contains('active')) {
+  link.classList.remove('active')
+  showingSubMenu = false
+  subMenuEl.style.top = '0'
+  return
+}
