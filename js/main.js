@@ -91,14 +91,17 @@ topMenuEl.addEventListener('click', function(evt) {
   evt.preventDefault();
   const link = evt.target;
   if (link.tagName !== 'A') return;
-  
 
+  // Task 5.3
+  if (link.classList.contains('active')) {
+    link.classList.remove('active');
+    showingSubMenu = false;
+    subMenuEl.style.top = '0';
+    return;
+  }
 
-// Task 5.3
-if (link.classList.contains('active')) {
-  link.classList.remove('active');
-  showingSubMenu = false;
-  subMenuEl.style.top = '0';
-  return;
-}
-})
+  // Task 5.4 
+  topMenuLinks.forEach(function(link) {
+    link.classList.remove('active');
+  });
+});
