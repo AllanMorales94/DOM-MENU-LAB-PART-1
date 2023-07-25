@@ -114,4 +114,14 @@ topMenuEl.addEventListener('click', function(evt) {
     return linkObj.text === link.textContent
   })
   showingSubMenu = 'subLinks' in linkInfo
+
+  // Task 5.7
+  if (showingSubMenu) {
+    buildSubMenu(linkInfo.subLinks)
+    subMenuEl.style.top = '100%'
+  } else {
+    subMenuEl.style.top ='0'
+    mainEl.innerHTML = '<h1>about</h1>'
+  }
+  
 });
