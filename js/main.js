@@ -104,4 +104,7 @@ topMenuEl.addEventListener('click', function(evt) {
   topMenuLinks.forEach(function(link) {
     link.classList.remove('active');
   });
+  
+  // Task 5.5 
+  link.classList.add('active')
 });
