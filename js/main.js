@@ -107,4 +107,11 @@ topMenuEl.addEventListener('click', function(evt) {
   
   // Task 5.5 
   link.classList.add('active')
+
+
+  // Task 5.6
+  const linkInfo = menuLinks.find(function(linkObj) {
+    return linkObj.text === link.textContent
+  })
+  showingSubMenu = 'subLinks' in linkInfo
 });
