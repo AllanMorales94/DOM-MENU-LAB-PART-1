@@ -28,28 +28,28 @@ const menuLinks = [
 
 
 // Task 1.0 selecting our main element from our document 
-const mainEl = document.querySelector('main')
+const mainEl = document.querySelector('main');
 
 // Task 1.1 using style to link our color from our css file
-mainEl.style.backgroundColor = 'var(--main-bg)'
+mainEl.style.backgroundColor = 'var(--main-bg)';
 
 // Task 1.2 using innerHTML to update our html with a new element 
-mainEl.innerHTML = '<h1>Polish Your Mastering Skills!</h1>'
+mainEl.innerHTML = '<h1>Polish Your Mastering Skills!</h1>';
 
 // Task 1.3 using classList to assign a class
-mainEl.classList = 'flex-ctr'
+mainEl.classList = 'flex-ctr';
 
 // Task 2.0 selecting an id using #
-const topMenuEl = document.querySelector('#top-menu')
+const topMenuEl = document.querySelector('#top-menu');
 
 // Task 2.1 using style to add a height to our css file
-topMenuEl.style.height = '100%'
+topMenuEl.style.height = '100%';
 
 // Task 2.2 using var as asked to on Task 1.1
-topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
+topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 
 // Task 2.3 using classList to assign a class 
-topMenuEl.classList = 'flex-around'
+topMenuEl.classList = 'flex-around';
 
 // Task 3.1 Iterating over menuLinks
 menuLinks.forEach(link => {
@@ -58,39 +58,40 @@ menuLinks.forEach(link => {
   // Adding a href with setAttribute() with a property of link object
   aEl.setAttribute('href', link.href)
   // Set the new element's content to the value of the text property of the link object.
-  aEl.textContent = link.text
+  aEl.textContent = link.text;
   // Append the new element to the topMenuEl element.
-  topMenuEl.append(aEl)
+  topMenuEl.append(aEl);
 });
 
 // Task 4.0 selecting the id using #
-const subMenuEl = document.querySelector('#sub-menu')
+const subMenuEl = document.querySelector('#sub-menu');
 
 // Task 4.1 using style to add a height to our css file
-subMenuEl.style.height = '100%'
+subMenuEl.style.height = '100%';
 
 // Task 4.2 using style to link our color from our css file
-subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)'
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)';
 
 // Task 4.3 using classList to assign a class
-subMenuEl.classList = 'flex-around'
+subMenuEl.classList = 'flex-around';
 
 // Task 4.4 using CSS styling to position 
-subMenuEl.style.position = 'absolute'
+subMenuEl.style.position = 'absolute';
 
 // Task 4.5 using CSS to adjust top property
-subMenuEl.style.top = '0'
+subMenuEl.style.top = '0';
 
 // Task 5.1 cache all <a> elements inside a variable to a different element
 const topMenuLinks = document.querySelectorAll('#top-menu a')
 // Task 5.1 declare a showingSubMenu variable and initialize it to false
-let showingSubMenu = false
+let showingSubMenu = false;
 
 // Task 5.2
 topMenuEl.addEventListener('click', function(evt) {
   evt.preventDefault();
   const link = evt.target;
-  if (link.tagName !== 'A') return;
+  if (link.tagName !== 'A') 
+    return;
 
   // Task 5.3
   if (link.classList.contains('active')) {
@@ -106,22 +107,22 @@ topMenuEl.addEventListener('click', function(evt) {
   });
   
   // Task 5.5 
-  link.classList.add('active')
+  link.classList.add('active');
 
 
   // Task 5.6
   const linkInfo = menuLinks.find(function(linkObj) {
-    return linkObj.text === link.textContent
+    return linkObj.text === link.textContent;
   })
-  showingSubMenu = 'subLinks' in linkInfo
+  showingSubMenu = 'subLinks' in linkInfo;
 
   // Task 5.7
   if (showingSubMenu) {
     buildSubMenu(linkInfo.subLinks)
-    subMenuEl.style.top = '100%'
+    subMenuEl.style.top = '100%';
   } else {
-    subMenuEl.style.top ='0'
-    mainEl.innerHTML = '<h1>about</h1>'
+    subMenuEl.style.top ='0';
+    mainEl.innerHTML = '<h1>about</h1>';
   }
   
 
@@ -129,18 +130,33 @@ topMenuEl.addEventListener('click', function(evt) {
   function buildSubMenu(subLinks) {
     subMenuEl.innerHTML = ''
     subLinks.forEach(function(link) {
-    const linkEl = document.createElement('a')
-    linkEl.setAttribute('href', link.href)
-    linkEl.textContent = link.text
-    subMenuEl.appendChild(linkEl)
-    })
-  }
+    const linkEl = document.createElement('a');
+    linkEl.setAttribute('href', link.href);
+    linkEl.textContent = link.text;
+    subMenuEl.appendChild(linkEl);
+    });
+  };
 });
 
 // Task 6.0 
 subMenuEl.addEventListener('click', function(evt) {
-evt.preventDefault()
-const link = evt.target
-if (link.tagName !== 'A') return
-console.log(link.textContent)
-})
+  evt.preventDefault();
+  const link = evt.target;
+  if (link.tagName !== 'A') return;
+  console.log(link.textContent);
+
+
+  // Task 6.1
+  showingSubMenu = false;
+  subMenuEl.style.top = '0';
+
+
+  // Task 6.2
+  topMenuLinks.forEach(function(link) {
+    link.classList.remove('active');
+  });
+
+  
+  // Task 6.3
+  mainEl.innerHTML = `<h1>${link.textContent}</h1>`;
+});
